@@ -1,6 +1,6 @@
 const express = require("express");
-const { getTodos, addTodo, updateTodo, deleteTodo } = require("../controllers/todoController");
-const authMiddleware = require("../middleware/authMiddleware");
+const { getTodos, addTodo, updateTodo, deleteTodo } = require("../controllers/todoControllers");
+const authMiddleware = require("../middleware/authMiddlewares");
 const router = express.Router();
 
 router.get("/", authMiddleware, getTodos);
