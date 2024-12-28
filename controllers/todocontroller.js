@@ -1,8 +1,5 @@
-
-
 const Todo = require("../models/Todo");
 
-// Get all todos
 exports.getTodos = async (req, res) => {
   try {
     const todos = await Todo.find({ userId: req.user.id });  
